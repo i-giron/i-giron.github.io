@@ -133,6 +133,9 @@ aside img {
   max-width: 100%;
 }
 
+.gallery {display: flex;
+flex-wrap: wrap; }
+
 footer {
   margin-top: 10px;
 }
