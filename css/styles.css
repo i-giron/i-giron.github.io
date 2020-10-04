@@ -27,6 +27,12 @@ html { background-color: #78878F
 .image {
     display: flex;
     border-radius: 4px;
+    border: 1px solid black;
+}
+.image-caption{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly:
 }
 
 .workhistory 
@@ -38,10 +44,3 @@ html { background-color: #78878F
     
 }
 
-p, input, li {
-    
-}
-
-footer {
-    
-}
