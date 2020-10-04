@@ -1,5 +1,3 @@
-
-
 html { background-color: #78878F
     
 }
@@ -8,7 +6,7 @@ html { background-color: #78878F
     background-color:#E0DBCB;
     justify-content:space-between;
     align-items: center;
-    padding 1%;
+    padding: 1%;
 
 }
 
@@ -26,9 +24,12 @@ html { background-color: #78878F
 
 }
 
-}
 .workhistory 
 {
+    background-color: #19252c;
+    display: flex;
+    flex: 50%;
+
     
 }
 
