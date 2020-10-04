@@ -6,6 +6,7 @@ html { background-color: #78878F
 
 .header { display: flex;
     background-color:#E0DBCB;
+    justify-content:space-evenly;
      width: 100%;
     
 }
