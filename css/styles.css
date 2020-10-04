@@ -11,10 +11,12 @@ html { background-color: #78878F
 
 }
 
-header img {
-    
-}
+.wrapper { width: 960 px;
+    justify-content:center;
+    align-items: center;
 
+
+}
 header h1 {
    
 }
