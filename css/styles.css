@@ -1,9 +1,9 @@
-html { background-color: #78878F
+html { background-color: #0d354b
     
 }
 
 .header { display: flex;
-    background-color:#E0DBCB;
+    background-color:#ffffff;
     justify-content:space-between;
     align-items: center;
     padding: 1%;
@@ -42,6 +42,7 @@ html { background-color: #78878F
     background-color: #19252c;
     display: flex;
     flex: 50%;
+    font-family: 'Roboto Condensed', sans-serif;
 
     
 }
