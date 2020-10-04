@@ -34,7 +34,8 @@ html { background-color: #0d354b
 .image-caption{
     display: flex;
     flex-flow: row wrap;
-    justify-content: space-evenly:
+    justify-content: space-evenly;
+    background-color: #82b6d4;
 }
 
 .work-history 
