@@ -24,6 +24,11 @@ html { background-color: #78878F
 
 }
 
+.image {
+    display: flex;
+    border-radius: 4px;
+}
+
 .workhistory 
 {
     background-color: #19252c;
