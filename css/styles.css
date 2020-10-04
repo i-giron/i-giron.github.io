@@ -4,7 +4,9 @@ html { background-color: #78878F
     
 }
 
-.header { width: 100%;
+.header { display: flex;
+    background-color:#E0DBCB;
+     width: 100%;
     
 }
 
