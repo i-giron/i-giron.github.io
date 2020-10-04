@@ -7,21 +7,28 @@ html { background-color: #78878F
 .header { display: flex;
     background-color:#E0DBCB;
     justify-content:space-between;
-    width: 100%;
+    align-items: center;
+    padding 1%;
 
 }
 
-.wrapper { width: 960 px;
+.wrapper { 
+    display: flex;
     justify-content:center;
     align-items: center;
-
-
-}
-header h1 {
-   
 }
 
-h1, h2, h3 {
+.content-body {
+    width: 960 px;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
+
+}
+
+}
+.workhistory 
+{
     
 }
 
