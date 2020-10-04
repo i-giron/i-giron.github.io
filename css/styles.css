@@ -22,7 +22,7 @@ html { background-color: #0d354b
     width: 960 px;
     display: flex;
     justify-content: center;
-    flex-wrap:wrap;
+    flex-direction: column;
 
 }
 
