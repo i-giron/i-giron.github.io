@@ -6,6 +6,7 @@
     display: flex;
     background-color:#072c4e;
     justify-content: space-between;
+    flex-flow: row wrap;
     margin: 15px;
     width: 100%;
 }
@@ -16,13 +17,13 @@
 }
 
 .image-description {
-    display: flex;
     font-family: 'Source Sans Pro', sans-serif;
     background-color:#96C5DF;
-    align-self: center;
+    flex-flow:column wrap;
     margin: 15%;
 }
 .image {
+    display: flex;
     width: 300 px;
     height: 300 px;
     border-radius: 4px;
@@ -71,12 +72,12 @@
     }
     
     .image-description {
-        display: flex;
         font-family: 'Source Sans Pro', sans-serif;
         background-color:#96C5DF;
-        align-self: flex-start;
+        align-self: center;
     }
     .image {
+        display: flex;
         width: 300 px;
         height: 300 px;
         border-radius: 4px;
@@ -101,10 +102,10 @@
     .content-body{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         width:960 px;
     }
     .wrapper{
         display: flex;
-        align-items: center;
-        flex-direction: column;
+        justify-content: center;
     }
