@@ -88,7 +88,6 @@
     }
     .image-body {
         display:flex;
-        width: 300 px;
         border-radius: 4px;
         flex-flow: row wrap;
         justify-content: space-evenly;
@@ -98,13 +97,15 @@
     
     .work-history{
         background-color:#FFFFFF;
-        padding: 15px;
+        margin-left: 5px;
+        padding-left: 5px;
         width: 400 px;
     }
     
     .content-body{
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
         width:960 px;
     }
     .wrapper{
