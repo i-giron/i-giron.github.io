@@ -19,9 +19,10 @@
     display:flex;
     font-family: 'Source Sans Pro', sans-serif;
     background-color:#FFFFFF;
-    flex-flow:column wrap;
+    flex-direction:column;
     padding: 5 px;
     margin: 15px;
+    width: 33%;
 }
 .image {
     width: 300 px;
@@ -32,7 +33,6 @@
 }
 .image-body {
     display:flex;
-    flex-flow: row wrap;
     justify-content: center;
     width: 300 px;
     border-radius: 4px;
@@ -50,12 +50,14 @@
 .content-body{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: space-around;
     max-width:960 px;
 }
 .wrapper{
     display: flex;
     justify-content: center;
+    align-items:center;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 1000px){
