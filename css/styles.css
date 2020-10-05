@@ -4,7 +4,7 @@
 
 .header {
     display: flex;
-    background-color:#26348F;
+    background-color:#072c4e;
     justify-content: space-between;
     margin: 15px;
     width: 100%;
@@ -50,3 +50,60 @@
     align-items: center;
     flex-direction: column;
 }
+
+@media screen and (max-width: 1000px){
+    .resume-body {
+        background-color:#697391;
+    }
+    
+    .header {
+        display: flex;
+        background-color:#26348F;
+        justify-content: space-between;
+        margin: 15px;
+        width: 100%;
+    }
+    .resume-name{
+        color:#FFFFFF;
+        font-size: 30px;
+        font-family: 'Roboto Condensed', sans-serif;
+    }
+    
+    .image-description {
+        display: flex;
+        font-family: 'Source Sans Pro', sans-serif;
+        background-color:#96C5DF;
+        align-self: flex-start;
+    }
+    .image {
+        width: 300 px;
+        height: 300 px;
+        border-radius: 4px;
+    
+    }
+    .image-body {
+        display:flex;
+        width: 300 px;
+        border-radius: 4px;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin-bottom: 15px;
+    
+    }
+    
+    .work-history{
+        background-color:#96C5DF;
+        padding: 15px;
+        width: 400 px;
+    }
+    
+    .content-body{
+        display: flex;
+        justify-content: center;
+        width:960 px;
+    }
+    .wrapper{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
