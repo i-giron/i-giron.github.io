@@ -1,5 +1,5 @@
 .resume-body {
-    background-color:#697391;
+    background-color:#a9abb1;
 }
 
 .header {
@@ -18,7 +18,7 @@
 
 .image-description {
     font-family: 'Source Sans Pro', sans-serif;
-    background-color:#96C5DF;
+    background-color:#FFFFFF;
     flex-flow:column wrap;
     margin: 15%;
 }
@@ -37,7 +37,7 @@
 }
 
 .work-history{
-    background-color:#96C5DF;
+    background-color:#FFFFFF;;
     padding: 15px;
     width: 400 px;
 }
