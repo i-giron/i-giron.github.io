@@ -1,12 +1,12 @@
 .resume-body {
-    background-color:#26348F 
+    background-color:#697391;
 
 
 }
 
 .header {
     display: flex;
-    background-color:#96C5DF;
+    background-color:#26348F 
     justify-content: space-between;
     margin: 15px;
     width: 100%;
