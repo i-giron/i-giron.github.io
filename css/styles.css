@@ -17,14 +17,13 @@
 }
 
 .image-description {
+    display:flex;
     font-family: 'Source Sans Pro', sans-serif;
     background-color:#FFFFFF;
     flex-flow:column wrap;
     margin: 15%;
-    flex-flow:column wrap;
 }
 .image {
-    display: flex;
     width: 300 px;
     height: 300 px;
     border-radius: 4px;
@@ -35,6 +34,7 @@
     flex-flow: row wrap;
     width: 300 px;
     border-radius: 4px;
+    flex: 1;
 
 }
 
@@ -42,6 +42,7 @@
     background-color:#FFFFFF;
     padding: 15px;
     width: 400 px;
+    padding-left: 5px;
 }
 
 .content-body{
@@ -52,8 +53,7 @@
 }
 .wrapper{
     display: flex;
-    align-items: center;
-    flex-direction: column;
+    justify-content: center;
 }
 
 @media screen and (max-width: 1000px){
