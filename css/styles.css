@@ -7,6 +7,7 @@
     justify-content:space-between;
     align-items: center;
     width: 100%;
+    height:100 px;
     margin-bottom: 15px;
 
 }
@@ -31,11 +32,11 @@
 
 .image-body {
     display: flex;
+    flex-flow: row wrap;
     width: 200px;
     margin-right: 15px;
     margin-bottom: 15px;
     border: 1px solid black;
-    justify-content: space-evenly;
     
 }
 .image {
@@ -117,7 +118,7 @@
         max-width: 200px;
         display: flex;
         background: #82b6d4;
-        align-items: center;
+        align-self: center;
     }
     
     .work-history 
