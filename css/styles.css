@@ -46,8 +46,9 @@
 
 .content-body{
     display: flex;
-    justify-content: space-evenly;
-    width:960 px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width:960 px;
 }
 .wrapper{
     display: flex;
