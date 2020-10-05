@@ -19,7 +19,8 @@
     display: flex;
     font-family: 'Source Sans Pro', sans-serif;
     background-color:#96C5DF;
-    align-self: flex-start;
+    align-self: center;
+    margin: 15%;
 }
 .image {
     width: 300 px;
