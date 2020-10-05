@@ -21,6 +21,7 @@
     background-color:#FFFFFF;
     flex-flow:column wrap;
     margin: 15%;
+    flex-flow:column wrap;
 }
 .image {
     display: flex;
@@ -31,6 +32,7 @@
 }
 .image-body {
     display:flex;
+    flex-flow: row wrap;
     width: 300 px;
     border-radius: 4px;
 
@@ -44,7 +46,7 @@
 
 .content-body{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width:960 px;
 }
 .wrapper{
