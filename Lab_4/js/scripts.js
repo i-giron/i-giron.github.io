@@ -16,7 +16,7 @@ content.appendChild (paragraph2);
 let p1Phrase = "my name has " + myFullName.length + " characters"
 paragraph1.append(p1Phrase);
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-let p2Phrase = myFullName.charAt(2);
+let p2Phrase = myFullName.charAt(2).toUpperCase;
 paragraph2.append(p2Phrase);
 // 6 Add a new line to your second paragraph
 
