@@ -6,17 +6,18 @@ header.textContent = myFullName + "'s Lab 4";
 //  Label each paragraph with a distinct class name
 let paragraph1 = document.createElement ("p");
 paragraph1.className = "p1";
-content.appendChild (paragraph1);
 let paragraph2 = document.createElement ("p");
 paragraph2.className = "p2";
+let content = document.querySelector(".content");
+content.appendChild (paragraph1);
 content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-let content = document.querySelector(".content");
-let newPhrase = "my name has " + myFullName.length + " characters"
-paragraph1.append(newPhrase);
+let p1Phrase = "my name has " + myFullName.length + " characters"
+paragraph1.append(p1Phrase);
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
-
+let p2Phrase = myFullName.charAt(2);
+paragraph2.append(p2Phrase);
 // 6 Add a new line to your second paragraph
 
 // 7 Return the final three characters of your last name to that new line
