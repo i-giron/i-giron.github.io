@@ -19,8 +19,7 @@ paragraph1.append(p1Phrase);
 let p2Phrase = myFullName.charAt(2).toUpperCase();
 paragraph2.append(p2Phrase);
 // 6 Add a new line to your second paragraph
-let newLine = ('n');
-paragraph2.append(newLine);
+paragraph2.innerHTML += "<br/>";
 // 7 Return the final three characters of your last name to that new line
 let lastThreeChar =myFullName.substring(myFullName.length - 3, myFullName.length);
 paragraph2.append(lastThreeChar);
