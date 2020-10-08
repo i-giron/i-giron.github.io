@@ -2,7 +2,7 @@ let myFullName = 'Idis Giron'; // 10 characters in name...not including space
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
 let header = document.querySelector(".header");
 header.textContent = myFullName + "'s Lab 4";
-let nameCharacters = Number(myFullName - 1);
+let nameCharacters = myFullName.length - 1;
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 let paragraph1 = document.createElement ("p");
@@ -14,7 +14,7 @@ content.appendChild (paragraph1);
 content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-let p1Phrase = "my name has " + myFullName.length + " characters"
+let p1Phrase = "my name has " + nameCharacters.length + " characters"
 paragraph1.append(p1Phrase);
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 let p2Phrase = myFullName.charAt(2).toUpperCase();
