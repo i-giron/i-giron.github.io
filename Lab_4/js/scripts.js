@@ -2,6 +2,7 @@ let myFullName = 'Idis Giron'; // 10 characters in name...not including space
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
 let header = document.querySelector(".header");
 header.textContent = myFullName + "'s Lab 4";
+let nameCharacters = Number(myFullName - 1);
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 let paragraph1 = document.createElement ("p");
