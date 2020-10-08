@@ -5,9 +5,9 @@ let nameCharacters = myFullName.length - 1;
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 let paragraph1 = document.createElement ("p");
-paragraph1.className = "p1";
+paragraph1.className = "content1";
 let paragraph2 = document.createElement ("p");
-paragraph2.className = "p2";
+paragraph2.className = "content2";
 let content = document.querySelector (".content");
 content.appendChild (paragraph1);
 content.appendChild (paragraph2);
@@ -19,7 +19,7 @@ paragraph1.append(p1Phrase);
 let p2Phrase = myFullName.charAt(2).toUpperCase();
 paragraph2.append(p2Phrase);
 // 6 Add a new line to your second paragraph
-paragraph2.innerHTML("<br/>");
+paragraph2.append("\n");
 // 7 Return the final three characters of your last name to that new line
 let lastThreeChar =myFullName.substring(myFullName.length - 3, myFullName.length);
 paragraph2.append(lastThreeChar);
