@@ -13,7 +13,7 @@ content.appendChild (paragraph1);
 content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-let p1Phrase = "my name has " + myFullName.length - 1 + " characters"
+let p1Phrase = "my name has " + myFullName.length + " characters"
 paragraph1.append(p1Phrase);
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 let p2Phrase = myFullName.charAt(2).toUpperCase();
