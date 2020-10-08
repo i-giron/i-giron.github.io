@@ -9,12 +9,8 @@ paragraph1.className = "p1";
 let paragraph2 = document.createElement ("p");
 paragraph2.className = "p2";
 let content = document.querySelector (".content");
-let content1 = document.querySelector(".content1");
-content1.appendChild (paragraph1);
-let content2 = document.querySelector(".content2");
-content2.appendChild (paragraph2);
-content.appendChild(content1);
-content.appendChild(content2);
+content.appendChild (paragraph1);
+content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
 let p1Phrase = "my name has " + myFullName.length + " characters"
@@ -26,7 +22,8 @@ paragraph2.append(p2Phrase);
 paragraph2.write("<br>");
 
 // 7 Return the final three characters of your last name to that new line
-
+let lastThreeChar =myFullName.substring (myFullName.length - 3, myFullName.length);
+paragraph2.appendChild(document.createTextNode(lastThreeChar));
 // 8 Substring your first and last name into two separate variables
 
 // 9 Add the total length of your first and last names together
