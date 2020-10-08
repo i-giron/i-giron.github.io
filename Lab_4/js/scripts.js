@@ -23,7 +23,7 @@ paragraph2.write("<br>");
 
 // 7 Return the final three characters of your last name to that new line
 let lastThreeChar =myFullName.substring (myFullName.length - 3, myFullName.length);
-paragraph2.appendChild(document.createTextNode(lastThreeChar));
+paragraph2.append(lastThreeChar);
 // 8 Substring your first and last name into two separate variables
 
 // 9 Add the total length of your first and last names together
