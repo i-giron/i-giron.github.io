@@ -13,7 +13,7 @@ content.appendChild (paragraph1);
 content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
 //      (e.g. my name has 10 characters).
-let p1Phrase = "my name has " + myFullName.length + " characters"
+let p1Phrase = "my name has " + myFullName.length - 1 + " characters"
 paragraph1.append(p1Phrase);
 // 4 & 5 Into the second paragraph tag, return the 3rd character in your first name
 let p2Phrase = myFullName.charAt(2).toUpperCase();
@@ -30,4 +30,4 @@ let lastName = myFullName.substring (5, 9);
 // 9 Add the total length of your first and last names together
 let nameLength = firstName.length + lastName.length;
 // 10 Display that total next to your name in your header
-document.querySelector(".header").append("The length of my name is " + nameLength);
+header.textContent = "The length of my name is " + nameLength;
