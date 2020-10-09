@@ -27,8 +27,8 @@ paragraph2.innerHTML += "<br/>";
 let lastThreeChar =myFullName.substring(myFullName.length - 3, myFullName.length);
 paragraph2.append(lastThreeChar);
 // 8 Substring your first and last name into two separate variables
-let firstName = myFullName.substring(0, idx);
-let lastName = myFullName.substring (idx + 1);
+let firstName = myFullName.substring(0, 3);
+let lastName = myFullName.substring (4 + 9);
 // 9 Add the total length of your first and last names together
 let nameLength = firstName.length + lastName.length;
 // 10 Display that total next to your name in your header
