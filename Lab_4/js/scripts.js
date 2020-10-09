@@ -1,7 +1,7 @@
 let myFullName = 'Idis Giron'; // 9 characters in name...not including space
 // 1 Change the content of the div with class "header" to "[Your name]'s Lab 4"
 const header = document.querySelector(".header");
-header.innerText = myFullName + "'s Lab 4";
+header.innerText = myFullName + "'s Lab 4.";
 // 2 Insert two paragraphs into the div with the class "content"
 //  Label each paragraph with a distinct class name
 let paragraph1 = document.createElement ("p");
@@ -27,9 +27,9 @@ paragraph2.innerHTML += "<br/>";
 let lastThreeChar =myFullName.substring(myFullName.length - 3, myFullName.length);
 paragraph2.append(lastThreeChar);
 // 8 Substring your first and last name into two separate variables
-let firstName = myFullName.substring(0, 3);
-let lastName = myFullName.substring (4 + 9);
+let firstName = myFullName.substring(0, idx);
+let lastName = myFullName.substring (idx + 1);
 // 9 Add the total length of your first and last names together
 let nameLength = firstName.length + lastName.length;
 // 10 Display that total next to your name in your header
-header.append("The length of my name is "+ nameLength);
+header.append(" The length of my name is "+ nameLength);
