@@ -8,7 +8,9 @@ let paragraph1 = document.createElement ("p");
 paragraph1.className = "content1";
 let paragraph2 = document.createElement ("p");
 paragraph2.className = "content2";
+
 let content = document.querySelector (".content");
+
 content.appendChild (paragraph1);
 content.appendChild (paragraph2);
 // 3 Into the first paragraph, insert the phrase "my name has " length of your name " characters"
