@@ -257,7 +257,7 @@ const countries = [
     { name: "Yemen", code: "YE" },
     { name: "Zambia", code: "ZM" },
     { name: "Zimbabwe", code: "ZW" }
-  ];
+];
   console.log("List of countries in the world", countries);
 
   //4.Design the following function to run on the click of a button from the index page
@@ -265,7 +265,7 @@ const countries = [
   let button = document.createElement ("button");
   button.innerHTML = "Activate Countries";
   div.appendChild (button);
-
+  // 5
   function randomCountries (min, max) {
       min = Math.ciel (min);
       max = Math.floor (max);
