@@ -1,8 +1,11 @@
 let myFullName = 'Idis Giron'; 
+let header =document.createElement ('h1');
 header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
-const myOL = document.createElement('div');
-
+let div = document.createElement("div");
+div.setAttribute ('class', 'content');
+var myOL = document.createElement('ol');
+// 3. Give your new ordered list the class "countries"
 const countries = [
     { name: "Afghanistan", code: "AF" },
     { name: "Åland Islands", code: "AX" },
@@ -249,12 +252,20 @@ const countries = [
     { name: "Zimbabwe", code: "ZW" }
   ];
   console.log("List of countries in the world", countries);
-   
+
+  //4.Design the following function to run on the click of a button from the index page
+
+  let button = document.createElement ("button");
+  button.innerHTML = "Activate Countries";
+  const btn = document.querySelector('button');
+
+  // 5.Select 25 random countries from your list by writing a separate function that makes use of Math.random 
+  
   function getRandom(arr) {
     return arr[Math.floor(Math.random() * arr.length)]
-  }
-  
-  let randomCountry = getRandom(Object.values(countries));
-  
-  console.log(`Random country: ${randomCountry.name}`);
-  console.log('Random country info', randomCountry);
+}
+
+let randomCountry = getRandom(Object.values(countries));
+
+console.log(`Random country: ${randomCountry.name}`);
+console.log('Random country info', randomCountry);
