@@ -265,7 +265,6 @@ const countries = [
   let button = document.createElement ("button");
   button.innerHTML = "Activate Countries";
   div.appendChild (button);
-  const btn = document.querySelector('button');
 
   function randomCountries (min, max) {
       min = Math.ciel (min);
