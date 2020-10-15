@@ -258,20 +258,20 @@ const countries = [
     { name: "Zambia", code: "ZM" },
     { name: "Zimbabwe", code: "ZW" }
 ];
-  console.log("List of countries in the world", countries);
+console.log("List of countries in the world", countries);
 
   //4.Design the following function to run on the click of a button from the index page
 
-  let button = document.createElement ("button");
-  button.innerHTML = "Activate Countries";
-  div.appendChild (button);
-  // 5
-  function randomCountries (min, max) {
-      min = Math.ciel (min);
-      max = Math.floor (max);
-      return Math.floor(Math.random() * (max-min) + min);
-
-  }
+let button = document.createElement ("button");
+button.innerHTML = "Activate Countries";
+div.appendChild ("button");
+//5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
+function randomCountries (min, max) {
+    min = Math.ciel (min);
+    max = Math.floor (max);
+    return Math.floor(Math.random() * (max-min) + min);
+ }
   
+// 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
 
  
