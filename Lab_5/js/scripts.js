@@ -1,11 +1,18 @@
 let myFullName = 'Idis Giron'; 
+//1. Add a header to the lab with "YourName's List Of Countries"
 let header =document.createElement ('h1');
+const body = document.querySelector ('body');
+body.appendChild (header);
 header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
 let div = document.createElement("div");
 div.setAttribute ('class', 'content');
-var myOL = document.createElement('ol');
+let myOL = document.createElement('ol');
+document.querySelector ('body').appendChild (myOL);
 // 3. Give your new ordered list the class "countries"
+myOL.className = "countries";
+
+// list of countries
 const countries = [
     { name: "Afghanistan", code: "AF" },
     { name: "Åland Islands", code: "AX" },
@@ -257,6 +264,15 @@ const countries = [
 
   let button = document.createElement ("button");
   button.innerHTML = "Activate Countries";
+  div.appendChild (button);
   const btn = document.querySelector('button');
+
+  function randomCountries (min, max) {
+      min = Math.ciel (min);
+      max = Math.floor (max);
+      return Math.floor(Math.random() * (max-min) + min);
+
+  }
+  
 
  
