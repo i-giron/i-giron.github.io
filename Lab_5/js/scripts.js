@@ -259,13 +259,4 @@ const countries = [
   button.innerHTML = "Activate Countries";
   const btn = document.querySelector('button');
 
-  // 5.Select 25 random countries from your list by writing a separate function that makes use of Math.random 
-  
-  function getRandom(arr) {
-    return arr[Math.floor(Math.random() * arr.length)]
-}
-
-let randomCountry = getRandom(Object.values(countries));
-
-console.log(`Random country: ${randomCountry.name}`);
-console.log('Random country info', randomCountry);
+ 
