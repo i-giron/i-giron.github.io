@@ -276,7 +276,7 @@ function randomCountries () {
     const MAX = 25;
     while (country.length <MAX) {
         let index = Math.floor(Math.random() * countries.length);
-        for (let 1 = 0; i <countries.length; i ++){
+        for (let i = 0; i <countries.length; i ++){
             if(!country.includes(countries[index])){
                 country.push(countries[index]);
             }
