@@ -19,6 +19,7 @@ let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
 div.appendChild (button);
 const btn = document.querySelector ('button');
+btn.addEventListener ("click", genRand);
 
 // list of countries
 const countries = [
@@ -269,21 +270,18 @@ const countries = [
 console.log("List of countries in the world", countries);
 
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
-function randomCountries() {
-    let randCountries = [];
-    let max = 25;
-    while (countries.length < max ){
-        let index = Math.floor(Math.random()* List.length);
-        for (let i=0; i <List.length; i++){
-            if(!countries.includes(List[index]))
-            {countries.push(List[index]);}
+function genRand(){
+
+	let countries = [];
+	let MAX = 25;
+    while (countries.length < MAX){
+       let index = Math.floor(Math.random() * List.length);
+        for(let i = 0; i < List.length; i++){
+          	if(!countries.includes(List[index])){
+			  	countries.push(List[index]);
+          }
         }
     }
-    return Math.floor(Math.random() * (max-min) + min);
- }
-  
-// 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
-
-newList.forEach(countries => console.log(countries));
-
-btn.onclick = newList;
+setList.innerHTML= countries.map(function (country) {
+    return '<li>' + '<b>' + country['code'] + '</b>' + ", "  + country['name']  + '</li>';}).join('');
+}
