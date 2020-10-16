@@ -19,7 +19,6 @@ let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
 div.appendChild (button);
 const btn = document.querySelector ('button');
-btn.addEventListener ("click", randomCountries);
 
 // list of countries
 const countries = [
@@ -271,16 +270,6 @@ console.log("List of countries in the world", countries);
 
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
 
-function randomCountries () {
-    shuffleArray (countries);
-    const randomList = randomList.slice (0, 25);
-
-    const newList = document.createElement ("li");
-    newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
-    newList.append (country.name);
-    body.appendChild(newList);
-};
-
 function shuffleArray(array)
 {
     for (let i = array.length - 1; i >0; i--)
@@ -288,5 +277,16 @@ function shuffleArray(array)
     [array [i], array[j]] = [array[j], array[i]];
 }
 }
- 
-    
+function randomCountries () {
+    shuffleArray (countries);
+    const randomList = randomList.slice (0, 25);
+
+    const mapFunction = randomList.map ((country) => {
+    const newList = document.createElement ("li");
+    newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
+    newList.append (country.name);
+    body.appendChild(newList);
+});
+}
+
+btn.onclick = randomCountries; 
