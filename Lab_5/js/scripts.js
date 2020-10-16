@@ -9,7 +9,7 @@ let div = document.createElement('div');
 div.setAttribute ('class', 'content');
 body.appendChild (div);
 let myOL = document.createElement('ol');
-document.querySelector ('body').appendChild (myOL);
+div.appendChild (myOL);
 // 3. Give your new ordered list the class "countries"
 myOL.className = "countries";
 
