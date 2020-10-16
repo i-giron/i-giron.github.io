@@ -17,7 +17,7 @@ myOL.className = "countries";
 
 let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
-div.appendChild ('button');
+div.appendChild (button);
 const btn = document.querySelector ('button');
 
 // list of countries
