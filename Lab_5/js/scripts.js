@@ -5,7 +5,7 @@ const body = document.querySelector ('body');
 body.appendChild (header);
 header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
-let div = document.createElement("div");
+let div = document.createElement('div');
 div.setAttribute ('class', 'content');
 body.appendChild ('div');
 let myOL = document.createElement('ol');
