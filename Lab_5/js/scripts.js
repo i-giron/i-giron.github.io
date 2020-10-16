@@ -265,6 +265,7 @@ console.log("List of countries in the world", countries);
 let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
 div.appendChild ('button');
+const btn = document.querySelector ('button');
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
 function randomCountries (min, max) {
     min = Math.ciel (min);
@@ -284,4 +285,4 @@ for (i =1; i<26; i++){
 let randCountries = countries [RandomInt (min,max)];}
 newList.forEach(countries => console.log(countries));
 }
-button.onclick = createNewList;
+btn.onclick = createNewList;
