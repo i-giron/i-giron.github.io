@@ -6,7 +6,7 @@ body.appendChild (header);
 header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
 let div = document.createElement('div');
-div.setAttribute ('class','content');
+div.className = "content";
 const myOL = document.createElement('ol');
 body.appendChild(div);
 div.appendChild(myOL);
@@ -18,6 +18,7 @@ let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
 div.appendChild (button);
 const btn = document.querySelector ('button');
+btn.addEventListener("click", randomCountries);
 
 // list of countries
 const countries = [
@@ -279,10 +280,8 @@ function shuffleArray(array)
 }
 function randomCountries() {
     myOL.innerHTML = " ";
-    shuffleArray (countries);
-    const randomList = randomList.slice (0, 25);
-    console.log (countries);
-
+    shuffleArray(countries);
+    const randomList = randomList.slice(0, 25);
     const mapFunction = randomList.map ((country) => {
     const newList = document.createElement ("li");
     newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
@@ -291,4 +290,3 @@ function randomCountries() {
 });
 }
 
-btn.onclick = randomCountries; 
