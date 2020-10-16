@@ -7,6 +7,7 @@ header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
 let div = document.createElement("div");
 div.setAttribute ('class', 'content');
+body.appendChild ('div');
 let myOL = document.createElement('ol');
 document.querySelector ('body').appendChild (myOL);
 // 3. Give your new ordered list the class "countries"
