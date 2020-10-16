@@ -282,6 +282,6 @@ function genRand(){
           }
         }
     }
-setList.innerHTML= countries.map(function (country) {
+countries.innerHTML= countries.map(function (country) {
     return '<li>' + '<b>' + country['code'] + '</b>' + ", "  + country['name']  + '</li>';}).join('');
 }
