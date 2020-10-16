@@ -6,13 +6,12 @@ body.appendChild (header);
 header.innerText = myFullName + "'s List of Countries";
 // 2. Using JS, inject an ordered list into the div with the class "content"
 let div = document.createElement('div');
-div.setAttribute ('class', 'content');
-body.appendChild (div);
-let myOL = document.createElement('ol');
-div.appendChild (myOL);
+div.setAttribute ('class','content');
+const myOL = document.createElement('ol');
+body.appendChild(div);
+div.appendChild(myOL);
 // 3. Give your new ordered list the class "countries"
 myOL.className = "countries";
-
 //4.Design the following function to run on the click of a button from the index page
 
 let button = document.createElement ('button');
