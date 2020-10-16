@@ -279,6 +279,7 @@ function shuffleArray(array)
 // 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
 }
 function randomCountries() {
+    myOL.innerHTML = " ";
     shuffleArray (countries);
     const randomList = randomList.slice (0, 25);
     console.log (countries);
