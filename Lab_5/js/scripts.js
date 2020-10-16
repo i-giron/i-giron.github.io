@@ -269,15 +269,16 @@ const countries = [
 console.log("List of countries in the world", countries);
 
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
-
+//6. Make sure the selection is unique
 function shuffleArray(array)
 {
     for (let i = array.length - 1; i >0; i--)
     {const j = Math.floor(Math.random() * (i+1));
     [array [i], array[j]] = [array[j], array[i]];
 }
+// 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
 }
-function randomCountries () {
+function randomCountries() {
     shuffleArray (countries);
     const randomList = randomList.slice (0, 25);
 
@@ -285,7 +286,7 @@ function randomCountries () {
     const newList = document.createElement ("li");
     newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
     newList.append (country.name);
-    body.appendChild(newList);
+    myOL.appendChild(newList);
 });
 }
 
