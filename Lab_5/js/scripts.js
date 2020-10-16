@@ -262,9 +262,9 @@ console.log("List of countries in the world", countries);
 
   //4.Design the following function to run on the click of a button from the index page
 
-let button = document.createElement ("button");
-button.innerHTML = "Activate Countries";
-div.appendChild ("button");
+let button = document.createElement ('button');
+button.innerHTML = 'Activate Countries';
+div.appendChild ('button');
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
 function randomCountries (min, max) {
     min = Math.ciel (min);
@@ -273,5 +273,15 @@ function randomCountries (min, max) {
  }
   
 // 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
+let newList = document.querySelectorAll ("li");
+body.appendChild (newList);
 
- 
+function createNewList () {
+let min = 0;
+let max = 25;
+let i;
+for (i =1; i<26; i++){
+let randCountries = countries [RandomInt (min,max)];}
+newList.forEach(countries => console.log(countries);
+}
+button.onclick = createNewList;
