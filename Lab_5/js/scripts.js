@@ -269,22 +269,21 @@ const countries = [
 console.log("List of countries in the world", countries);
 
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
-function randomCountries (min, max) {
-    min = Math.ciel (min);
-    max = Math.floor (max);
+function randomCountries() {
+    let randCountries = [];
+    let max = 25;
+    while (countries.length < max ){
+        let index = Math.floor(Math.random()* List.length);
+        for (let i=0; i <List.length; i++){
+            if(!countries.includes(List[index]))
+            {countries.push(List[index]);}
+        }
+    }
     return Math.floor(Math.random() * (max-min) + min);
  }
   
 // 7. Using a .forEach or a .map function, inject a new list item for each country into the ol from #3
-let newList = document.querySelectorAll ("li");
-body.appendChild (newList);
 
-function createNewList () {
-let min = 0;
-let max = 25;
-let i;
-for (i =1; i<26; i++){
-let randCountries = countries [RandomInt (min,max)];}
 newList.forEach(countries => console.log(countries));
-}
-btn.onclick = createNewList;
+
+btn.onclick = newList;
