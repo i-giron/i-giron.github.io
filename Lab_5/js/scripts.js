@@ -272,18 +272,21 @@ console.log("List of countries in the world", countries);
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
 
 function randomCountries () {
-    let country = [];
-    const MAX = 25;
-    while (country.length <MAX) {
-        let index = Math.floor(Math.random() * countries.length);
-        for (let i = 0; i <countries.length; i ++){
-            if(!country.includes(countries[index])){
-                country.push(countries[index]);
-            }
-        }
-    }
+    shuffleArray (countries);
+    const randomList = randomList.slice (0, 25);
+
+    const newList = document.createElement ("li");
+    newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
+    newList.append (country.name);
+    body.appendChild(newList);
+};
+
+function shuffleArray(array)
+{
+    for (let i = array.length - 1; i >0; i--)
+    {const j = Math.floor(Math.random() * (i+1));
+    [array [i], array[j]] = [array[j], array[i]];
 }
-country.map(function (randcountry){
-    return '<li>' + '<b>' + randcountry ['code'] + '</b>' + "," + randcountry ['name'] + '</li>';}).join('');
-
-
+}
+ 
+    
