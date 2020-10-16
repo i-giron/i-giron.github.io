@@ -282,6 +282,6 @@ let max = 25;
 let i;
 for (i =1; i<26; i++){
 let randCountries = countries [RandomInt (min,max)];}
-newList.forEach(countries => console.log(countries);
+newList.forEach(countries => console.log(countries));
 }
 button.onclick = createNewList;
