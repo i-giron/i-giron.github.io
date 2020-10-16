@@ -281,6 +281,7 @@ function shuffleArray(array)
 function randomCountries() {
     shuffleArray (countries);
     const randomList = randomList.slice (0, 25);
+    console.log (countries);
 
     const mapFunction = randomList.map ((country) => {
     const newList = document.createElement ("li");
