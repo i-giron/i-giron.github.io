@@ -13,6 +13,13 @@ document.querySelector ('body').appendChild (myOL);
 // 3. Give your new ordered list the class "countries"
 myOL.className = "countries";
 
+//4.Design the following function to run on the click of a button from the index page
+
+let button = document.createElement ('button');
+button.innerHTML = 'Activate Countries';
+div.appendChild ('button');
+const btn = document.querySelector ('button');
+
 // list of countries
 const countries = [
     { name: "Afghanistan", code: "AF" },
@@ -261,12 +268,6 @@ const countries = [
 ];
 console.log("List of countries in the world", countries);
 
-  //4.Design the following function to run on the click of a button from the index page
-
-let button = document.createElement ('button');
-button.innerHTML = 'Activate Countries';
-div.appendChild ('button');
-const btn = document.querySelector ('button');
 //5. Select 25 random countries from your list by writing a separate function that makes use of Math.random
 function randomCountries (min, max) {
     min = Math.ciel (min);
