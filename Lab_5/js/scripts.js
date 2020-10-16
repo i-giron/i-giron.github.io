@@ -18,7 +18,6 @@ let button = document.createElement ('button');
 button.innerHTML = 'Activate Countries';
 div.appendChild (button);
 const btn = document.querySelector ('button');
-btn.addEventListener("click", randomCountries);
 
 // list of countries
 const countries = [
@@ -281,7 +280,7 @@ function shuffleArray(array)
 function randomCountries() {
     myOL.innerHTML = " ";
     shuffleArray(countries);
-    const randomList = randomList.slice(0, 25);
+    const randomList = countries.slice(0, 25);
     const mapFunction = randomList.map ((country) => {
     const newList = document.createElement ("li");
     newList.innerHTML = "<strong>" +country.code + "</strong>" + " ";
@@ -289,4 +288,5 @@ function randomCountries() {
     myOL.appendChild(newList);
 });
 }
+btn.onclick = randomCountries;
 
