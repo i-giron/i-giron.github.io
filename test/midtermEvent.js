@@ -1,7 +1,4 @@
-let msg1 = document.getElementById('midtermMessage1');
-let msg2 = document.getElementById('midtermMessage2');
-
-function myFunction (name){
-    msg1.innerHTML = msg2.textContent + (name);
+let button = document.getElementById("btnGet").addEventListener ("click", myFunction);
+function myFunction (){
+    document.getElementById ('midtermMessage2').innerHTML ="Idis Giron"
 }
-button.addEventListener ("click", myFunction("Idis Giron"));
