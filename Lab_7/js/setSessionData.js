@@ -1,17 +1,31 @@
 const main = document.getElementById("main");
 
 function getBusRoute() {
-  let busRoute = ""; // Your code here
+  let busRoute = document.getElementById("busroute").value; // Your code here
 
   if ((typeof busRoute !== "undefined") & (busRoute !== "")) {
-    let busRouteURL = ""; // Your code here
+    console.log(busRoute)
+    let busRouteURL = "https://api.umd.io/v0/bus/routes/" + busRoute; // Your code here
+    console.log(busRouteURL);
+    const fetchPromise= fetch(busRouteURL);
 
     fetch(busRouteURL)
       .then((response) => {
         return response.json();
       })
       .then((route) => {
-        // YOUR CODE HERE
+          let title = route.title;
+          let latMax = route.lat_max;
+          let latMin = route.lat_min;
+          let lonMax = route.lon_max;
+          let lonMin = route.lon_min;
+
+          sessionStorage.setItem("title", title);
+          sessionStorage.setItem("lat_max", latMax);
+          sessionStorage.setItem("lat_min", latMin);
+          sessionStorage.setItem("lon_max", lonMax);
+          sessionStorage.setItem("lon_min", lonMin);
+          
       })
       .catch((err) => {
         console.log(err);
