@@ -30,8 +30,18 @@ function getBusRoute() {
       .catch((err) => {
         console.log(err);
         main.innerHTML = "Invalid bus route";
+        sessionStorage.setItem("title", "Nothing Set");
+        sessionStorage.setItem("lat_max", "Nothing Set");
+        sessionStorage.setItem("lat_min", "Nothing Set");
+        sessionStorage.setItem("lon_max", "Nothing Set");
+        sessionStorage.setItem("lon_min", "Nothing Set");
       });
   } else {
     main.innerHTML = "No value provided";
+    sessionStorage.setItem("title", "Nothing Set");
+    sessionStorage.setItem("lat_max", "Nothing Set");
+    sessionStorage.setItem("lat_min", "Nothing Set");
+    sessionStorage.setItem("lon_max", "Nothing Set");
+    sessionStorage.setItem("lon_min", "Nothing Set");
   }
 }
