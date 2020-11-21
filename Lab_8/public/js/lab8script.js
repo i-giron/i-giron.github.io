@@ -2,7 +2,7 @@
 let url = "https://www.reddit.com/r/popular.json";
 let chart = "";
 console.log(url);
-//const fetchPromise = fetch(url);
+const fetchPromise = fetch(url);
 
 let settings = { method: "Get" };
 let chartValues = [];
@@ -23,15 +23,19 @@ async function getData() {
                 let random = getRandomInt(0, listSize);
                 let post = json.data.children[random].data;
                 console.log(post)
-                let subreddit = post.subreddit;
-                let author = post.author;
-                let title = post.title;
-                let ups = post.ups;
+
+                let subreddit = finder.subreddit;
+                let author = finder.author;
+                let title = finder.title;
+                let ups = finder.ups;
 
                 let msg = "<b>Subreddit </b>: " + subreddit + 
                 " <b>Author</b>:" + author + 
                 " <b>Title</b>:" + title + 
                 " <b>Up votes</b>: " + ups;
+
+                let select = document.getElementById("redditList");
+                select.innerHTML += "<li>" + message + "</li>";
                 /*
                     Get a random number within the size of the list
                     Get subreddit, author, title, and ups from record
