@@ -1,19 +1,23 @@
 {
-  "name": "i-giron.github.io",
+  "name": "giron_lab8",
   "version": "1.0.0",
-  "description": "",
+  "description": "INST 377 Lab 8",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/i-giron/i-giron.github.io.git"
   },
-  "author": "",
+  "author": "Idis Giron",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/i-giron/i-giron.github.io/issues"
   },
-  "homepage": "https://github.com/i-giron/i-giron.github.io#readme"
+  "homepage": "https://github.com/i-giron/i-giron.github.io#readme",
+  "dependencies":{
+    "express": "^4.17.1"
+  }
 }
