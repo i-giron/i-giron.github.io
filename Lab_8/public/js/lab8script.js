@@ -28,8 +28,10 @@ async function getData() {
                 let title = post.title;
                 let ups = post.ups;
 
-                let select = document.getElementById("redditList");
-                select.innerHTML += "<li>" + message + "</li>";
+                let msg = "<b>Subreddit </b>: " + subreddit + 
+                " <b>Author</b>:" + author + 
+                " <b>Title</b>:" + title + 
+                " <b>Up votes</b>: " + ups;
                 /*
                     Get a random number within the size of the list
                     Get subreddit, author, title, and ups from record
@@ -52,7 +54,7 @@ async function getData() {
         // Do you need to remove the comments from here in order to get it to work?
 };
 
-window.onload = async function makeChart() {
+async function makeChart() {
     getData();
     chart = new CanvasJS.Chart("chartContainer", {
         title: {
