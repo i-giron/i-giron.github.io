@@ -6,11 +6,10 @@ console.log(url);
 let settings = { method: "Get" };
 let chartValues = [];
 
-function getRandomInt(min, max) 
-{
+function randomInt(min, max) { 
     min = Math.ceil(min);
     max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min) + min);
+    return Math.floor(Math.random() * (max - min) + min); 
   }
 
 async function getData() {
@@ -19,22 +18,20 @@ async function getData() {
         .then((json) => {
             let listSize = json.data.children.length;
             console.log(listSize)
-
             // Loop to pick 5 random entries
+
             for (x = 0; x < 5; x++) {
-                let random = getRandomInt(0, listSize);
+                let random = randomInt(0, listSize);
                 let post = json.data.children[random].data;
                 console.log(post)
-
                 let subreddit = post.subreddit;
                 let author = post.author;
                 let title = post.title;
                 let ups = post.ups;
 
                 let message = "<b>Subreddit </b>: " + subreddit + 
-                " <b>Author</b>:" + author + 
-                " <b>Title</b>:" + title + 
-                " <b>Up votes</b>: " + ups;
+                " <b>Author</b>:" + author + " <b>Title</b>:" + 
+                title + " <b>Up votes</b>: " + ups;
 
                 let select = document.getElementById("redditList");
                 select.innerHTML += "<li>" + message + "</li>";
@@ -46,13 +43,12 @@ async function getData() {
                     Add a new <li> element with the message to the 'redditList' element
                     Add a data entry to chartValues with author as the label and ups as the y component
                 */
-    
 
-        
+                /*.......*/
                 
                 let addToChart = {'label':author,y:ups}; // Gave this. This needs to be added to the 'chartValues'
-        
-                chartValues.push(addtoChart);
+                /*.......*/
+                chartValues.push(addToChart);
             }
         })
         .then(values => console.log(chartValues));
@@ -70,7 +66,8 @@ async function makeChart() {
             { 
                 type: "column",
                 name: "Popular Reddit",
-                dataPoints: chartValues
+                dataPoints:chartValues
+                 // WHAT GOES HERE???
             }
         ]
     });
