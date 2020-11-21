@@ -24,10 +24,10 @@ async function getData() {
                 let post = json.data.children[random].data;
                 console.log(post)
 
-                let subreddit = finder.subreddit;
-                let author = finder.author;
-                let title = finder.title;
-                let ups = finder.ups;
+                let subreddit = post.subreddit;
+                let author = post.author;
+                let title = post.title;
+                let ups = post.ups;
 
                 let msg = "<b>Subreddit </b>: " + subreddit + 
                 " <b>Author</b>:" + author + 
@@ -35,7 +35,7 @@ async function getData() {
                 " <b>Up votes</b>: " + ups;
 
                 let select = document.getElementById("redditList");
-                select.innerHTML += "<li>" + message + "</li>";
+                select.innerHTML += "<li>" + msg + "</li>";
                 /*
                     Get a random number within the size of the list
                     Get subreddit, author, title, and ups from record
@@ -69,7 +69,7 @@ async function makeChart() {
             { 
                 type: "column",
                 name: "Popular Reddit",
-                dataPoints: chartValues
+                dataPoints:chartValues
             }
         ]
     });
@@ -77,4 +77,4 @@ async function makeChart() {
     chart.render();
 }
 
-window.onload = makeChart();
+window.onload = makeChart;
