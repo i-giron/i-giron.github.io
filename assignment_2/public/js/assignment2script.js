@@ -298,6 +298,92 @@ function submitNewPerson() {
 }
 
 /*
+------ ADD NEW GROUP ------
+*/
+function submitNewGroup() {
+
+  console.log("Called submitNewGroup");
+  let name = document.getElementById("addGroup").value;
+
+  console.log("name:" + name);
+  data = { 'name': name };
+
+  //console.log(JSON.stringify(data))
+  let groupURL = "http://localhost:4000/group";
+  const fetchPromise = fetch(groupURL, {
+    method: 'POST', headers: {
+      'Content-Type': 'application/json'
+
+    }, body: JSON.stringify(data)
+  });
+
+  let groupId;
+  fetchPromise
+    .then((response) => {
+      return response.json();
+    })
+    .then((group) => {
+      console.log("Here POST group");
+      console.log(group);
+
+      let message = "ERROR";
+      if (typeof group.id !== "undefined") {
+        name = group.data.name
+        groupId = group.id;
+        message = "Message: " + group.message + "name: " + name + "<br>groupId: " + groupId + "<br> ";
+      }
+      else if(typeof group !== "undefined"){
+        message = "Message: " + group.message ;
+      }
+      document.getElementById("postNewGroupContent").innerHTML = message;
+    })
+    .catch((err) => {
+      console.log(err);
+      document.getElementById("postNewGroupContent").innerHTML = "Invalid group : " + data.name;
+    });
+  }
+
+  /*
+  ----- SEARCH TASK -----
+*/
+const tasks =[];
+
+fetch ('./allTasks', {method: "Get"})
+    .then (res => res.json())
+    .then ((json) => {
+      json.data.forEach(element => {
+        tasks.push(element);
+      });
+    })
+function findMatches (wordToMatch, taskList) {
+  return taskList.filter(task=> {
+    const regex = new RegExp (wordToMatch, 'gi');
+    return task.taskName.match(regex)
+  })
+}
+
+function displayMatches () {
+  console.log(this.value);
+  const matchArray = findMatches(this.value, tasks);
+  console.log(matchArray);
+  const html = matchArray.map(task => {
+    const regex = new RegExp (this.value, 'gi');
+    const taskName = task.taskName.replace(regex, `<span class="hl">${this.value}</span>`);
+    return `
+    <li>
+        <span class="name">${taskName}</span>
+      </li>
+      `;
+  }).join('');
+  suggestions.innerHTML = html;
+  }
+const searchInput = document.querySelector ('#search');
+const suggestions = document.querySelector ('#searchResults');
+
+searchInput.addEventListener ('change', displayMatches);
+searchInput.addEventListener ('keyup', displayMatches);
+
+/*
    ------------   Code for onload of page ------------
    1) Fills out drop down boxes
 */
